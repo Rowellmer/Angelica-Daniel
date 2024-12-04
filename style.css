@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Default text color for readability */
+}
+
+/* Default Background */
+body {
+    background: url('image/shrine.webp') no-repeat center center fixed; /* First background */
+    background-size: cover;
+}
+
+/* Background for Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        background: url('image/sakura.jpg') no-repeat center center fixed; /* Second background */
+        background-size: cover;
+    }
+}
+
+/* Background for Large Screens (Desktops) */
+@media (min-width: 1200px) {
+    body {
+        background: url('image/korean.jpg') no-repeat center center fixed; /* Third background */
+        background-size: cover;
+    }
+}
+
+/* Add an overlay to improve text visibility */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Ensure it stays behind all content */
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffeb3b; /* Bright yellow on hover */
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Subtle transparent white overlay */
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.1); /* Transparent table background */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+    color: #fff; /* Ensure table text is readable */
+}
+
+table th:hover, table td:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Button Styles */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff9800;
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-image {
+    width: 100px; /* Reduced width */
+    height: 100px; /* Reduced height */
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #fff;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
